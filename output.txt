@@ -1,4 +1,4 @@
 Enter Size of an Array
-2 5 6 7 8 
+6 8 13 17 20 22 25 28 30 35 
 Enter key
-Element is at 3
+Element is at 6

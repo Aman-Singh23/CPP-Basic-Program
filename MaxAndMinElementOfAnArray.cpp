@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits.h>
 using namespace std;
 
 int main() {
@@ -11,7 +12,7 @@ int main() {
 
 	
 	int array[] = {2,4,9,6,7,4,1};
-	int n = 7, max = array[0], min = array[0];
+	int n = 7, max = INT_MIN, min = INT_MAX;
 
 	for(int i=1; i<7; i++)
 	{
