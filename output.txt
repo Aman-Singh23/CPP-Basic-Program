@@ -1,2 +1,2 @@
-5 7 9 
-5 7 9 
+Enter no of element
+Average of all element is 30
