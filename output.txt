@@ -1,3 +1,2 @@
-14
-2.3
-5.6
+Area is 100
+Perimeter is 62.8
