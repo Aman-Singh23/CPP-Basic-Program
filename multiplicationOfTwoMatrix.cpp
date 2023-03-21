@@ -10,48 +10,72 @@ int main() {
 	#endif
 
 	int r1, c1, r2, c2;
-	
-	cout<<"Enter r1 & c1 dimension for 1st matrics"
-	cin>>m>>n;
 
-	cout<<"Enter r2 & c2 dimension for 2nd matrics"
-	cin>>x>>y;
+	cin>>r1>>c1;
+	cin>>r2>>c2;
 
-	int array1[r1][c1], array2[r2][r2], array3[r1][c2];
+	int array1[r1][c1], array2[r2][c2], mArray[r1][c2] ;
 
-	if(c1!=r2)
+	if(c1 != r2)
 	{
 		cout<<"Multiplication not possible";
+		return 0;
 	}
 	else
 	{
-		cout<<"Enter elements of 1st matrics";
 		for(int i=0; i<r1; i++)
 		{
-			for(int j=0; i<c1; j++)
-			{
+			for(int j=0; j<c1; j++)
 				cin>>array1[i][j];
-			}
 		}
 
-		cout<<"Enter elements of 2nd matrics";
+		for(int i=0; i<r1; i++)
+		{
+			for(int j=0; j<c1; j++)
+				cout<<array1[i][j]<<" ";
+			cout<<endl;
+		}
+
+		cout<<endl;
+
 		for(int i=0; i<r2; i++)
 		{
-			for(int j=0; i<c2; j++)
-			{
-				cin>>array1[i][j];
-			}
+			for(int j=0; j<c2; j++)
+				cin>>array2[i][j];
 		}
-		cout<<"Multiplication of two matrics";
+
+		for(int i=0; i<r2; i++)
+		{
+			for(int j=0; j<c2; j++)
+				cout<<array2[i][j]<<" ";
+			cout<<endl;
+		}
+
+
 		for(int i=0; i<r1; i++)
 		{
-			for(int j=0; i<c2; j++)
+			for(int j=0; j<c2; j++)
 			{
-				array3[i][j] = array1[i][j] * array2[i][j];
+				mArray[i][j]=0;
+				for(int k=0; k<c1; k++)
+				{
+					mArray[i][j] += array1[i][k]*array2[k][j];
+				}
 			}
 		}
-	}
 
+		cout<<endl;
+
+		for(int i=0; i<r1; i++)
+		{
+			for(int j=0; j<c2; j++)
+				cout<<mArray[i][j]<<" ";
+			cout<<endl;
+		}
+
+
+
+	}
 
 	return 0;
 
