@@ -1,29 +1,40 @@
 #include <iostream>
-#include<string>
 using namespace std;
 
 class Student
 {
 private:
 	int roll_no;
-	float physicsMark, chemistryMark, mathMark;
 	string name;
+	int physicsMark;
+	int chemistryMark; 
+	int mathMark;
 
 public:
-	Student(string name, int roll_no, float physicsMark, float chemistryMark, float mathMark);
-	getName(string name);
-	getRollNo(string roll_no);
-	getMarks(float physicsMark, float chemistryMark, float mathMark);
-	totalMarks(float physicsMark, float chemistryMark, float mathMark);
-	displayGrade();
-
-}
-
-Student::Student(string name, int roll_no, float physicsMark, float chemistryMark, float mathMark)
-{
-	
-}
-
+	Student(int r, string n, int p, int c, int m)
+	{
+		name = n;
+		roll_no = r;
+		physicsMark = p;
+		chemistryMark = c;
+		mathMark = m;
+	}
+	float totalMarks()
+	{
+		return physicsMark + chemistryMark + mathMark;
+	}
+	char displayGrade()
+	{
+		float totalmarks = totalMarks()/3;
+		
+		if(totalmarks>=60)
+			return 'A';
+		else if(totalmarks<60 & totalmarks>=40)
+			return 'B';
+		else
+			return 'C';
+	}
+};
 int main() {
 	#ifndef CP
 		// for getting input from input.txt
@@ -32,11 +43,18 @@ int main() {
 		freopen("output.txt", "w", stdout);
 	#endif
 
+	int roll_no;
 	string name;
-	//cin>>name;
-	getline(cin, name);
-	cout<<name;
+	float physics, chemistry, math;
 
-	return 0;
+	cin>>roll_no;
+	cin>>name;
+	cin>>physics>>chemistry>>math;
+
+	Student s1(roll_no, name, physics, chemistry, math);
+	cout<<roll_no<<endl;
+	cout<<name<<endl;
+	cout<<"Average Marks "<<s1.totalMarks()/3<<endl;
+	cout<<s1.displayGrade();
 
 }

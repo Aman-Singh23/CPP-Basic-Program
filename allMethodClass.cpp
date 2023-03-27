@@ -66,7 +66,7 @@ int Rectangle::perimeter()
 
 bool Rectangle::isSquare()
 {
-	return length== breadth;
+	return length == breadth;
 }
 
 Rectangle::~Rectangle()
