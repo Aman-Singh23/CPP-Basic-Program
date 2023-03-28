@@ -1,4 +1,2 @@
-12
-Aman
-Average Marks 10
-C
+25
+Constructor Destroyed
