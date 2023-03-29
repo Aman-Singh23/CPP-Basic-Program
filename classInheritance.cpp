@@ -45,7 +45,7 @@ public:
 
 	int volumn()
 	{
-		getLength()*getBreadth()*height;
+		return getLength()*getBreadth()*height;
 	}
 };
 
@@ -94,7 +94,7 @@ bool Rectangle::isSquare()
 
 Rectangle::~Rectangle()
 {
-	cout<<"\nConstructor Destroyed\n";
+	//cout<<"\nConstructor Destroyed\n";
 }
 
 int main() {
@@ -110,10 +110,11 @@ int main() {
 	// cout<<r.area();
 
 	Cuboid c(5);
-	cout<<getHeight();
+	// cout<<c.getHeight();
 	c.setLength(10);
-	c.setBreadth(5);
-	cout<<volumn();
+	c.setBreadth(6);
+	cout<<"Area "<<c.area();
+	cout<<"\nVolumn "<<c.volumn();
 
 	return 0;
 
