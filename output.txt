@@ -1,4 +1,0 @@
-Area of Rectangle 100
-Perimeter of Rectangle 40
-Area of Circle 314
-Perimeter of Circle 62.8
