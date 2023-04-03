@@ -1,3 +1,1 @@
-Name HP
-Price 95000.5
-Quantity 2
+60
