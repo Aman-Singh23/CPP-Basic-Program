@@ -1,0 +1,9 @@
+Laptop
+56000.3
+1
+Desktop
+150001
+2
+Smartphone
+22000
+1
