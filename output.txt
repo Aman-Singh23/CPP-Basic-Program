@@ -1,15 +1,2 @@
-Enter the number of Item: 
-Enter All Item 
-
-Enter 1 Item Name, Price and Quantity
-Enter 2 Item Name, Price and Quantity
-Item 1
-Apple
-150001
-1
-
-Item 2
-Samsung
-127000
-1
-
+May I know yor name ?
+Hello Aman Singh2 Nice to meet you !!
