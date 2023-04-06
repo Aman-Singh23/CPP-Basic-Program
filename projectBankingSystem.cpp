@@ -220,7 +220,7 @@ int main() {
 
 	do
 	{
-		cout<<"\n\tSelect one option below ";
+		cout<<"\n\n\tSelect one option below ";
 		cout<<"\n\t1 Open an Account";
 		cout<<"\n\t2 Balance Enquiry";
 		cout<<"\n\t3 Deposit";
